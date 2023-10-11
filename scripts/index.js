@@ -239,7 +239,7 @@ async function getSearch(search) {
           type: "video",
           part: "snippet",
           maxResults: "20",
-          // q: search,
+          q: search,
           relatedToVideoId:"6Nb-prB-4P0&"
         })
     );
