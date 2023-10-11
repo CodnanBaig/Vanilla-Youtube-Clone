@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <title>Home- YouTube</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+    />
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </head>
+  <body>
+    <nav class="p-3 fixed-top position-fixed">
+      <div class="container-fluid d-flex p-0">
+        <div class="navigation">
+          <span class="material-symbols-outlined px-2 pt-2"> menu </span>
+          <a class="navbar-brand text-decoration-none mx-2" href="#">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+              alt=""
+              width="30"
+              height="24"
+              class="d-inline-block align-text-top"
+            />
+            <strong onclick="goHome()">YouTube</strong>
+          </a>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control search-input"
+            placeholder="Search"
+            aria-describedby="button-addon2"
+            style="height: 40px"
+            id="searchQuery"
+          />
+          <button class="btn search-button" onclick="search()" type="button" id="button-addon2">
+            <span class="material-symbols-rounded"> search </span>
+          </button>
+          <span class="material-symbols-rounded mic-icon"> mic </span>
+        </div>
+        <div class="profile mt-2">
+          <span class="material-symbols-outlined"> videocam </span>
+          <span class="material-symbols-outlined"> notifications </span>
+          <span class="material-symbols-rounded"> account_circle </span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="main">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="sidebar col-1 d-flex flex-column gap-5 text-center ps-0 position-fixed"
+            style="padding-right: 2%"
+          >
+            <div id="home">
+              <span class="material-symbols-outlined" onclick="goHome()"> home </span><br /><small
+                >Home</small
+              >
+            </div>
+            <div id="subscriptions">
+              <span class="material-symbols-outlined"> subscriptions </span
+              ><br /><small>Subscriptions</small>
+            </div>
+            <div id="music">
+              <span class="material-symbols-outlined"> play_circle </span
+              ><br /><small>Music</small>
+            </div>
+            <div id="library">
+              <span class="material-symbols-outlined"> video_library </span
+              ><br /><small>Library</small>
+            </div>
+            <div id="downloads">
+              <span class="material-symbols-outlined"> download </span
+              ><br /><small>Downloads</small>
+            </div>
+          </div>
+          <div class="col-11 main-cards" style="padding-left: 10%; width: 98%">
+            <div class="filters d-flex float-start gap-1">
+              <span class="material-symbols-rounded"> tune </span>
+              <select id="sortByName" class="form-select form-select-sm" aria-label="Default select example">
+                <option selected>Name</option>
+                <option value="atz">A-Z</option>
+                <option value="zta">Z-A</option>
+              </select>
+              <select id="sortByTime" class="form-select form-select-sm" aria-label="Default select example">
+                <option selected>Time</option>
+                <option value="new">Recent</option>
+                <option value="old">Oldest</option>
+              </select>
+            </div>
+            <br />
+            <hr />
+            <div id="results" class="row g-3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/2.23.0/date_fns.min.js"></script>
+  </body>
+</html>
+<script src="./scripts/index.js"></script>

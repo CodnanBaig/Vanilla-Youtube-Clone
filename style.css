@@ -1,0 +1,138 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #bababa #0f0f0f;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 30px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #bababa;
+  border-radius: 10px;
+  border: 0px solid #ffffff;
+}
+
+body {
+  padding-top: 8%;
+  background-color: #0f0f0f;
+  color: white;
+}
+a {
+  color: white;
+}
+nav {
+  background-color: #0f0f0f;
+}
+p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+small {
+  font-size: 10px;
+  text-align: center;
+}
+a:hover {
+  color: white;
+}
+.material-symbols-outlined,
+.material-symbols-rounded {
+  color: white;
+  font-size: 28px !important;
+  margin: auto;
+  font-weight: 200 !important;
+  cursor: pointer;
+}
+.input-group {
+  width: 50%;
+  margin: auto;
+}
+.input-group > input {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  outline: none;
+  background-color: #212121;
+  border: 0.5px solid gray;
+}
+#button-addon2 {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  height: 40px;
+  width: 64px;
+  background: #303030;
+}
+.mic-icon {
+  /* margin: auto; */
+  margin-left: 10px !important;
+  background: #303030;
+  border-radius: 50px !important;
+  padding: 5;
+}
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #f1f1f1;
+}
+.thumb {
+  border-radius: 15px;
+}
+#results > div {
+  line-height: 1;
+  cursor: pointer;
+}
+.channel-logo {
+  border-radius: 100%;
+}
+.channel-name,
+.stats {
+  color: #aaaaaa;
+  text-transform: capitalize;
+  margin-top: auto;
+}
+
+/* SEARCH */
+
+.s-title {
+  font-size: 18px;
+  color: #f1f1f1;
+}
+.channel-icon {
+  width: 15%;
+  border-radius: 50px;
+}
+.desc {
+    font-size: 12px;
+    color: #aaaaaa;
+}
+@media only screen and (max-width: 990px) {
+  .sidebar {
+    display: none !important;
+  }
+  .main-cards {
+    padding-left: 2% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .search-input,
+  .mic-icon,
+  .material-symbols-outlined {
+    display: none !important;
+  }
+  .search-button {
+    background: none !important;
+  }
+  .input-group {
+    width: 100%;
+    justify-content: end;
+  }
+}

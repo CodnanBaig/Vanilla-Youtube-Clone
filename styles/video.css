@@ -1,0 +1,12 @@
+#player, #title {
+    width: 80%;
+    margin: auto;
+}
+iframe {
+    width: 100% !important;
+    height: 500px;
+    margin: auto;
+}
+#title {
+    font-size: 20px;
+}
